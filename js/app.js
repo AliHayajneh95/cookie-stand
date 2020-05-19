@@ -1,202 +1,114 @@
-function branch(mincust, maxcust, avgcookiesales)
+var hours = ["6:00am",
+             "7:00am",
+             "8:00am",
+             "9:00am",
+             "10:00am",
+             "11:00am",
+             "12:00pm",
+             "1:00pm",
+             "2:00pm",
+             "3:00pm",
+             "4:00pm",
+             "5:00pm",
+             "6:00pm",
+             "7:00pm",
+            ];
+
+function createHeader()
+{
+    document.write('<table> <tr>');
+    for (var i = 0; i < hours.length; i++)
+        {
+            document.write('<th>' + hours[i] + '</th>');
+        }
+    document.write('</tr>');
+}
+
+
+function branch(name, mincust, maxcust, avgcookiesales)
 {
 
+
+    this.name = name;
     this.mincust = mincust;
     this.maxcust = maxcust;
     this.avgcookiesales = avgcookiesales;
 
-}
-
-var seattle = new branch(23, 65, 6.3);
-
-// NEXT CITY
-
-var tokyo
-{
-    var totalcookies = [,,,,,,,,,,,,,];
+    var totalcookies = new Array (14);
     var total = 0;
-    var mincust = 3;
-    var maxcust = 24;
-    var avgcookiesales = 1.2;
+    var hours = ["6am",
+                 "7am",
+                 "8am",
+                 "9am",
+                 "10am",
+                 "11am",
+                 "12pm",
+                 "1pm",
+                 "2pm",
+                 "3pm",
+                 "4pm",
+                 "5pm",
+                 "6pm",
+                 "7pm",
+                ];
 
-    function getRandomInt(min, max)
+    for (var i = 0; i < totalcookies.length; i++)
     {
-        return min + Math.floor(Math.random() * (Math.floor(max) - Math.floor(min)));
+        totalcookies[i] = customerPerHour(mincust, maxcust);
+        total += totalcookies[i];
+
+        document.write();
     }
 
-    function customerPerHour ()
+    function render()
     {
-        return getRandomInt(maxcust, mincust)
-    }
+        document.write('<tr>');
 
-    document.write('Tokyo <br> <ul>');
-    for (var i = 1; i < 15; i++)
-    {
-        if(i < 7)
+        for (var i = 0; i < totalcookies.length; i++)
         {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + i+5 + 'am: ' + totalcookies[i-1] + ' cookies ' + '</li>');
-        }
-        else if (i == 7)
-        {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + '12pm: ' + totalcookies[i-1] +' cookies' + '</li>');
-        }
-        else
-        {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + (i-7) + 'pm: ' + totalcookies[i-1] +' cookies' + '</li>');
-        }
-    }
-    document.write('<li> Total:' + total + '</li></ul>');
+            document.write('<td>' + totalcookies[i] + '</td>');
 
+        }
+        
+        document.write('</tr>');
+    }
+    render();
 }
 
 
+    /*
+    document.write(name + '<br> <ul>');
+    for(var i = 0; i < totalcookies.length; i++)
+    {
+        totalcookies[i] = customerPerHour(mincust, maxcust);
+        total += totalcookies[i];
 
-// NEXT CITY
+        document.write('<li>' + hours[i] + totalcookies[i] + '</li>');
 
-var dubai 
+        if(i == totalcookies.length)
+        {
+            document.write('<li> total: ' + total + '</li>');
+            document.write('</ul> <br>');
+        }
+    }
+}
+*/
+function getRandomInt(min, max)
 {
-    var totalcookies = [,,,,,,,,,,,,,];
-    var total = 0;
-    var mincust = 11;
-    var maxcust = 38;
-    var avgcookiesales = 3.7;
-
-    function getRandomInt(min, max)
-    {
-        return min + Math.floor(Math.random() * (Math.floor(max) - Math.floor(min)));
-    }
-
-    function customerPerHour ()
-    {
-        return getRandomInt(maxcust, mincust)
-    }
-
-    document.write('Dubai <br> <ul>');
-    for (var i = 1; i < 15; i++)
-    {
-        if(i < 7)
-        {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + i+5 + 'am: ' + totalcookies[i-1] + ' cookies ' + '</li>');
-        }
-        else if (i == 7)
-        {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + '12pm: ' + totalcookies[i-1] +' cookies' + '</li>');
-        }
-        else
-        {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + (i-7) + 'pm: ' + totalcookies[i-1] +' cookies' + '</li>');
-        }
-    }
-    document.write('<li> Total:' + total + '</li></ul>');
-
+    return min + Math.floor(Math.random() * (Math.floor(max) - Math.floor(min)));
 }
 
-
-
-
-// NEXT CITY
-
-var paris 
+function customerPerHour (min, max)
 {
-    var totalcookies = [,,,,,,,,,,,,,];
-    var total = 0;
-    var mincust = 20;
-    var maxcust = 38;
-    var avgcookiesales = 2.3;
-
-    function getRandomInt(min, max)
-    {
-        return min + Math.floor(Math.random() * (Math.floor(max) - Math.floor(min)));
-    }
-
-    function customerPerHour ()
-    {
-        return getRandomInt(maxcust, mincust)
-    }
-
-    document.write('Paris <br> <ul>');
-    for (var i = 1; i < 15; i++)
-    {
-        if(i < 7)
-        {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + i+5 + 'am: ' + totalcookies[i-1] + ' cookies ' + '</li>');
-        }
-        else if (i == 7)
-        {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + '12pm: ' + totalcookies[i-1] +' cookies' + '</li>');
-        }
-        else
-        {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + (i-7) + 'pm: ' + totalcookies[i-1] +' cookies' + '</li>');
-        }
-    }
-    document.write('<li> Total:' + total + '</li></ul>');
-
+    return getRandomInt(min, max);
 }
 
+createHeader();
 
 
 
-// NEXT CITY
-
-var lima 
-{
-    var totalcookies = [,,,,,,,,,,,,,];
-    var total = 0;
-    var mincust = 2;
-    var maxcust = 16;
-    var avgcookiesales = 4.6;
-
-    function getRandomInt(min, max)
-    {
-        return min + Math.floor(Math.random() * (Math.floor(max) - Math.floor(min)));
-    }
-
-    function customerPerHour ()
-    {
-        return getRandomInt(maxcust, mincust)
-    }
-
-    document.write('Lima <br> <ul>');
-    for (var i = 1; i < 15; i++)
-    {
-        if(i < 7)
-        {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + i+5 + 'am: ' + totalcookies[i-1] + ' cookies ' + '</li>');
-        }
-        else if (i == 7)
-        {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + '12pm: ' + totalcookies[i-1] +' cookies' + '</li>');
-        }
-        else
-        {
-            totalcookies[i-1] = customerPerHour();
-            total += totalcookies[i-1];
-            document.write('<li>' + (i-7) + 'pm: ' + totalcookies[i-1] +' cookies' + '</li>');
-        }
-    }
-    document.write('<li> Total:' + total + '</li></ul>');
-
-}
+var seattle = new branch('Seattle', 23, 65, 6.3);
+var tokyo = new branch('Tokyo', 3, 24, 1.2);
+var tokyo = new branch('Dubai', 11, 38, 2.3);
+var tokyo = new branch('Paris',20 ,38 ,2.3);
+var tokyo = new branch('Lima',2 ,16 ,4.6);
