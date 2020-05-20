@@ -1,5 +1,59 @@
-.data
+p
+{
+    font-family: 'Comic Neue', cursive;  
+    color: black;  
+    float: left;
+}
+
+td
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: lawngreen;
+}
+
+text
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: orangered;
+}
+
+body
+{
+    background-color: wheat;
+}
+
+table
+{
+    background-color: mediumvioletred;
+}
+
+img
+{
+    height: 250;
+    width: 250;
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+}
+
+nav > a
+{
+    float: right;
+    background-color: darkorchid;
+}
+
+nav > img
+{
+    float: left;
+    border-radius: 0%;
+    height: 40;
+    width: 75;
+
+}
+
+nav > h2
 {
     font-family: 'Comic Neue', cursive;
-    
+    margin-right: 50%;
+    margin-left: 50%;
 }
