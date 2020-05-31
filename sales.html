@@ -9,14 +9,14 @@
             <nav>
                 <a href="index.html">Home</a>
             </nav></header>
-        <main>
-            <form action="">
+        <main id = "main">
+            <form id = "locform">
                 <legend>New Branch Form</legend>
                 <fieldset>
-                   <label for="name">Branch name</label> <input type="text", id = "name"><br>
-                   <label for="minCust">Min Customer</label> <input type="text", id = "minCust"><br>
-                   <label for="maxCust">Max Customer</label> <input type="text", id = "maxCust"><br>
-                   <label for="avgCookiesales">Average cookie sales</label> <input type="text", id = "avgCookiesales"><br>
+                   <label for="name">Branch name</label> <input type="text", id = "name", required, type="number"><br>
+                   <label for="minCust">Min Customer</label> <input type="text", id = "mincust", required, type="number"><br>
+                   <label for="maxCust">Max Customer</label> <input type="text", id = "maxcust", required, type="number"><br>
+                   <label for="avgCookiesales">Average cookie sales</label> <input type="text", id = "avgcookiesales", required><br>
                     <input type="submit">
                 </fieldset>
             </form>
