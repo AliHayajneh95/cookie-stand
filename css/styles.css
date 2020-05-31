@@ -54,6 +54,7 @@ nav > img
 nav > h2
 {
     font-family: 'Comic Neue', cursive;
+    color: darkred;
     margin-right: 50%;
     margin-left: 50%;
 }
